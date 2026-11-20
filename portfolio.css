@@ -1,0 +1,650 @@
+/* Importar as fontes oficiais do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap');
+
+/* Configurações Gerais (Reset e Cores Base) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #faf9f6;
+  color: #1a1c1a;
+  font-family: 'Manrope', sans-serif;
+  line-height: 1.6;
+}
+
+/* --- 1. CABEÇALHO (HEADER) --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  background-color: #faf9f6;
+  border-bottom: 1px solid rgba(28, 27, 26, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.marca {
+  display: flex;
+  flex-direction: column;
+}
+
+.nome-marca {
+  font-family: 'Newsreader', serif;
+  font-size: 1.5rem;
+  color: #1a1c1a;
+}
+
+.subtitulo-marca {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #4a4640;
+  font-weight: 600;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+header nav a {
+  text-decoration: none;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #4a4640;
+  font-weight: 600;
+}
+
+header nav a:hover {
+  color: #1a1c1a;
+}
+
+header nav a.botao {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+}
+
+header nav a.botao:hover {
+  background-color: #825338;
+}
+
+/* Avatar pequeno com sombra visível utilizando o tom exato da secção Sobre mim (#f2efe9) */
+.avatar-pequeno {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 0 0 3px #f2efe9, 0 4px 12px rgba(130, 83, 56, 0.3);
+}
+
+/* --- 2. SECÇÃO INICIAL (FOTO QUADRADA COM CANTOS ARREDONDADOS) --- */
+#inicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 1.5rem 2rem 1.5rem;
+}
+
+.foto-destaque {
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.foto-destaque img {
+  width: 160px;
+  height: 160px;
+  border-radius: 16px;
+  object-fit: cover;
+  display: block;
+}
+
+#inicio h1 {
+  font-family: 'Newsreader', serif;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+  color: #1a1c1a;
+}
+
+#inicio p {
+  font-size: 1.125rem;
+  color: #4a4640;
+  max-width: 32rem;
+  margin-bottom: 1.5rem;
+}
+
+.sub-menu {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #4a4640;
+}
+
+.sub-menu a {
+  color: #4a4640;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.sub-menu a:hover {
+  color: #825338;
+}
+
+/* --- 3. FAIXA FOTOGRÁFICA DO DOURO --- */
+#paisagem {
+  padding: 0 1.5rem 3rem 1.5rem;
+}
+
+#paisagem figure {
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #efeeeb;
+}
+
+#paisagem img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- 4. SECÇÃO SOBRE MIM & CURIOSIDADE --- */
+#sobre {
+  padding: 4rem 1.5rem;
+  max-width: 68rem;
+  margin: 0 auto;
+}
+
+.container-sobre {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.etiqueta-seccao {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #825338;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.coluna-biografia h2 {
+  font-family: 'Newsreader', serif;
+  font-size: 2.25rem;
+  font-weight: 400;
+  margin-bottom: 1.25rem;
+  color: #1a1c1a;
+}
+
+.texto-biografia p {
+  color: #4a4640;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.bloco-especialidades {
+  margin-top: 2rem;
+}
+
+.bloco-especialidades h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #1a1c1a;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.lista-especialidades {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.item-especialidade {
+  position: relative;
+  padding: 0.85rem 1rem 0.85rem 2rem;
+  background-color: #ffffff;
+  border: 1px solid rgba(28, 27, 26, 0.08);
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: #4a4640;
+}
+
+.item-especialidade::before {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: #825338;
+  border-radius: 50%;
+}
+
+.coluna-curiosidade {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.caixa-curiosidade {
+  background-color: #f2efe9;
+  border: 1px solid rgba(28, 27, 26, 0.06);
+  padding: 1.5rem;
+  border-radius: 6px;
+}
+
+.cabecalho-curiosidade span {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #825338;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.texto-curiosidade {
+  font-family: 'Newsreader', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: #1a1c1a;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.estilo-sabiam {
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #825338;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.rodape-curiosidade {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #76716a;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.imagem-arquivo figure {
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #efeeeb;
+}
+
+.imagem-arquivo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.imagem-arquivo figcaption {
+  padding: 0.75rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #4a4640;
+  background-color: #ffffff;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* --- 5. EXPOSIÇÕES E RECONHECIMENTO (TABELA COM FUNDO #f2efe9) --- */
+#exposicoes {
+  padding: 4rem 1.5rem;
+  max-width: 68rem;
+  margin: 0 auto;
+}
+
+.cabecalho-seccao-expo {
+  margin-bottom: 2rem;
+}
+
+.etiqueta-expo {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #825338;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.cabecalho-seccao-expo h2 {
+  font-family: 'Newsreader', serif;
+  font-size: 2.25rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: #1a1c1a;
+}
+
+.cabecalho-seccao-expo p {
+  color: #4a4640;
+  font-size: 1rem;
+}
+
+.tabela-container {
+  width: 100%;
+  overflow-x: auto;
+  background-color: #f2efe9;
+  border: 1px solid rgba(28, 27, 26, 0.08);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+table caption {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #76716a;
+  text-align: left;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+thead {
+  background-color: #f2efe9;
+}
+
+th {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #4a4640;
+  padding: 0.85rem 1rem;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(28, 27, 26, 0.08);
+}
+
+td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(28, 27, 26, 0.08);
+  color: #4a4640;
+}
+
+.ano-destaque {
+  font-family: 'Newsreader', serif;
+  font-size: 1.25rem;
+  color: #825338;
+  font-weight: 600;
+}
+
+.texto-direita {
+  text-align: right;
+}
+
+th.texto-direita {
+  text-align: right;
+}
+
+/* --- 6. TESTEMUNHOS --- */
+#testemunhos {
+  padding: 4rem 1.5rem;
+  max-width: 68rem;
+  margin: 0 auto;
+}
+
+.cabecalho-testemunhos {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.cabecalho-testemunhos span {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #825338;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.cabecalho-testemunhos h2 {
+  font-family: 'Newsreader', serif;
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: #1a1c1a;
+}
+
+.cartao-testemunho {
+  background-color: #f2efe9;
+  border: 1px solid rgba(28, 27, 26, 0.06);
+  border-radius: 8px;
+  padding: 3rem 2rem;
+  text-align: center;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.cartao-testemunho blockquote {
+  font-family: 'Newsreader', serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #1a1c1a;
+  margin-bottom: 2rem;
+}
+
+.autor-testemunho {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.autor-testemunho img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.autor-testemunho cite {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #1a1c1a;
+}
+
+.local-testemunho {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #76716a;
+}
+
+/* --- 7. CONTACTO RÁPIDO --- */
+#contacto-rapido {
+  padding: 4rem 1.5rem 6rem 1.5rem;
+  max-width: 68rem;
+  margin: 0 auto;
+}
+
+.container-contacto {
+  background-color: #f2efe9;
+  border: 1px solid rgba(28, 27, 26, 0.06);
+  border-radius: 8px;
+  padding: 3rem 2rem;
+  text-align: center;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.container-contacto > span {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #825338;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.container-contacto h2 {
+  font-family: 'Newsreader', serif;
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: #1a1c1a;
+  margin-bottom: 1rem;
+}
+
+.container-contacto p {
+  color: #4a4640;
+  font-size: 0.95rem;
+  max-width: 36rem;
+  margin: 0 auto 2rem auto;
+}
+
+.link-email {
+  color: #1a1c1a;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.botoes-contacto {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.botao-secundario {
+  background-color: #ffffff;
+  color: #1a1c1a;
+  border: 1px solid rgba(28, 27, 26, 0.2);
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+.container-contacto .botao {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.info-extra-contacto {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #76716a;
+}
+
+/* --- 8. RODAPÉ (FOOTER) --- */
+footer {
+  background-color: #f2efe9;
+  border-top: 1px solid rgba(28, 27, 26, 0.08);
+  padding: 4rem 2rem 2rem 2rem;
+}
+
+.container-rodape {
+  max-width: 68rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.titulo-rodape {
+  font-family: 'Newsreader', serif;
+  font-size: 1.25rem;
+  color: #1a1c1a;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.coluna-rodape-principal p {
+  color: #4a4640;
+  font-size: 0.9rem;
+  max-width: 24rem;
+}
+
+.etiqueta-rodape {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #825338;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.coluna-rodape-estudio span,
+.coluna-rodape-estudio a,
+.coluna-rodape-galeria span {
+  display: block;
+  font-size: 0.85rem;
+  color: #4a4640;
+  margin-bottom: 0.4rem;
+  text-decoration: none;
+}
+
+.coluna-rodape-estudio a:hover {
+  color: #825338;
+  text-decoration: underline;
+}
+
+.rodape-inferior {
+  max-width: 68rem;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(28, 27, 26, 0.08);
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #76716a;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
